@@ -3,11 +3,13 @@ package com.pluralsight;
 public class Employee {
     private String name;
     private int employeeID;
-    private float hoursWorked,payRate;
+    private double hoursWorked,payRate;
 
     public String getName() {
-        return name;
+        return this.name;
     }
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -21,12 +23,12 @@ public class Employee {
         this.payRate = payRate;
     }
 
-    public float getHoursWorked() {
-        return hoursWorked;
+    public double getHoursWorked() {
+        return this. hoursWorked;
     }
 
-    public float getPayRate() {
-        return payRate;
+    public double getPayRate() {
+        return this. payRate;
     }
 
     public void setEmployeeID(int employeeID) {
@@ -34,21 +36,19 @@ public class Employee {
     }
 
     public int getEmployeeID() {
-        return employeeID;
+
+        return this.employeeID;
     }
 
-    public Employee(String name, int employeeID, float hoursWorked, float payRate) {
+    public Employee(String name, int employeeID, double hoursWorked, double payRate) {
         this.name = name;
         this.employeeID = employeeID;
         this.hoursWorked = hoursWorked;
         this.payRate = payRate;
     }
 
-    public static double grossPay(float hoursWorked, float payRate){
-        double grossPay = hoursWorked*payRate;
-        return grossPay;
-
+    public  double getGrossPay(){
+        return this.hoursWorked * this.payRate;
     }
-
 
 }
